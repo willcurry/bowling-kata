@@ -11,4 +11,11 @@
   
   (it "scores a sprare correctly"
     (should= 16 
-      (score (concat '(5 5 3) (repeat 17 0))))))
+      (score (concat '(5 5 3) (repeat 17 0)))))
+
+  (it "scores a strike correctly"
+    (should= 26
+      (score (concat '(10 5 3) (repeat 17 0)))))
+
+  (it "scores perfect game correctly"
+    (should= 300 (score (repeat 20 10)))))
